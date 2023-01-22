@@ -3,7 +3,7 @@ const heading = React.createElement(
   {
     id: "title",
   },
-  "Hello World from React"
+  "Hello World from React3"
 );
 
 const heading2 = React.createElement(
