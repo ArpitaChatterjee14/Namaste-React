@@ -1,0 +1,31 @@
+React is a library, Carousel is a JS Library
+
+We can write normal Hello World project using HTML as well as JS using DOM Manipulation.
+
+Browser has it's own API. We can inject React into our code using CDN in script tag with crossorigin attribute
+
+Shortest progrem of React is just to inject CDN into empty HTML using script tag
+
+React is invented by Facebook developers
+
+React is not limited to Browsers. There is React Native for mobile apps. React DOM is the web version of React.
+
+Any createElement from React is basically an object
+
+There is only one root and one render methods
+
+const heading = React.createElement("h1", {}, "Hello World from React"); =>  curly brace takes property.(props)
+
+<div id="root">Not Rendered</div>
+Anything inside div will be overwritten by React. Not Rendered will only be seen in website when React is unable to override it with it's createElement.
+root is not configured properly so React is unable to inject into root.
+
+If we put React CDN below the React script, it won't work and say that React is not defined in console.
+
+createElement like h1,div in React etc => create the root element from getelement by id root in React => render the React element into root
+
+Passing multiple children into a component is by passing array of elements.
+
+We can use JSX instead of createElement.
+
+

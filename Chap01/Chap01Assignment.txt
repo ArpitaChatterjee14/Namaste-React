@@ -1,0 +1,48 @@
+Q1. What is Emmet ?
+
+A1.
+1. Emmet uses different abbreviations and short expressions depending on what's passed, and then dynamically converts the abbreviations into the full code (Bolierplate). Emmet is mostly used for HTML, XML, and CSS, but it can also be used with programming languages.
+2. Emmet is a built-in feature of VS Code, so it doesn’t require any additional installation. By using shorthand and abbreviations, Emmet greatly improves and speeds up your HTML and CSS workflow.
+
+Q2. Difference between a Library and Framework?
+
+A2. A framework defines how a developer designs an application and a library consists of functions that an application can call to perform a task. The framework calls on the application code whereas our code controls when and where to call a library. It takes minimum efforts for a library to put inside a code and facilitates program binding.
+
+Q3. What is CDN? Why do we use it?
+
+A3. A CDN is a a geographically distributed group of servers that distributes content from an “origin” server throughout the world by caching content close to where each end user is accessing the internet via a web-enabled device. A CDN allows for the quick transfer of assets needed for loading Internet content including HTML pages, javascript files, stylesheets, images, and videos.
+
+Q4. Why is React known as React?
+
+A4. React is called React because it was designed to be a declarative, efficient, and flexible JavaScript library for building user interfaces.
+The name "React" was chosen because the library was designed to allow developers to "react" to changes in state and data within an application, and to update the user interface in a declarative and efficient manner.
+
+Q5. What is crossorigin in script tag?
+
+A5. The crossorigin attribute sets the mode of the request to an HTTP CORS Request. Web pages often make requests to load resources on other servers. Here is where CORS comes in. A cross-origin request is a request for a resource (e.g. style sheets, iframes, images, fonts, or scripts) from another domain. Here if we want to use React CDN, CORS needs to be enabled.
+<script crossorigin src="..."></script>
+
+Q6. What is diference between React and ReactDOM ?
+
+A6. React library is responsible for creating views and ReactDOM library is responsible to actually render UI in the browser.
+React is the entry point to the React library. The react-dom package provides DOM-specific methods that can be used at the top level of your app and as an escape hatch to get outside the React model if you need to.
+
+Q7. What is difference between react.development.js and react.production.js files via CDN?
+
+A7.<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+The versions above are only meant for development, and are not suitable for production.
+Minified and optimized production versions of React are available at:
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+We can React CDN to inject React into our code. We can inject it into any non React project for a partcular component.
+Development mode includes useful warnings and gives you access to tools that make development and debugging easier. Production mode minifies your code and better represents the performance your app will have on end users' devices. Size of prod files will be smaller than Dev files.
+
+Q8. What is async and defer?
+
+A8. So, there are three ways :
+
+1. Normal HTML and Script parsing : This is how a normal script tag would work. First of all, HTML will be parsed and it will stop where it will get the scripr tag. It will then get it from Network tab , available in browser and execute then and there. Once it's executed is completed, HTML will start parsing again. This gap which HTML parse has before and after the script execution is more.
+2. async attribute : Whenever there is an async attribute in script tag, it will be fetched from Network asynchronously parallely with HTML Parsing. As soon as it will be fetched and available in browser, it will start to execute. After this is finished, it will again start HTML parsing. This gap which HTML parse has before and after the script execution is lesser than above.
+3. defer attribute : Whenever there is an defer in script tag, it will be fetched from Network along with HTML Parsing. It has been fetched now from Network and HTML parsing continues. The scripts will only execute noe once HTML parsing is completed.
+If we want to execute some scripts in an order, it's better to use defer. The scripts will be fetched parallely with HTML parser but only executed one by one after HTML parsing is completed. If we want to use some third party resource for website like Google Analytics then async should be used.
